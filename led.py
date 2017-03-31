@@ -51,7 +51,7 @@ def set_value(num, value):
 def main():
   while (True):
 
-    key = raw_input("Enter 'w' for On, 's' for Off and any other key to quit.")
+    key = raw_input("Enter 'w' for On, 's' for Off and any other key to quit. You'll need to press enter after each character: ")
 
     if key == "w":
 
