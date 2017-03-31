@@ -48,7 +48,7 @@ def set_gpio(gpio_root, gpio_name, gpio_number, value):
 def main():
   set_gpio(gpio_root, gpio_name, 54, 1)
   time.sleep(2)
-  set_gpio(gpio_root, gpio_name, 54, 1)
+  set_gpio(gpio_root, gpio_name, 54, 0)
 
 if __name__ == "__main__":
     main()
