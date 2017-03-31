@@ -35,7 +35,7 @@ def export(gpio_root, gpio_name, gpio_number):
 
 def set_gpio(gpio_root, gpio_name, gpio_number, value):
   """Turns a gpio on or off"""
-  gpio_folder, gpio_addr = export_gpio(gpio_root, gpio_name, gpio_number)
+  gpio_folder, gpio_addr = export(gpio_root, gpio_name, gpio_number)
 
   f = open(os.path.join(gpio_root, gpio_folder, 'direction'), 'w')
   f.write("out")
