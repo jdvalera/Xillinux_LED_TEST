@@ -45,10 +45,31 @@ def set_gpio(gpio_root, gpio_name, gpio_number, value):
   f.write(str(1 if (value != 0) else 0))
   f.close()
 
+def set_value(num, value):
+  set_gpio(gpio_root, gpio_name, num, value)
+
 def main():
-  set_gpio(gpio_root, gpio_name, 54, 1)
-  time.sleep(2)
-  set_gpio(gpio_root, gpio_name, 54, 0)
+  while (True):
+
+    key = raw_input("Enter 'w' for On, 's' for Off and any other key to quit.")
+
+    if key == "w":
+
+      set_value(54, 1)
+      set_value(55, 1)
+      set_value(56, 1)
+      set_value(57, 1)
+
+    elif key == "s":
+
+      set_value(54, 0)
+      set_value(55, 0)
+      set_value(56, 0)
+      set_value(57, 0)
+
+    else:
+
+      break
 
 if __name__ == "__main__":
     main()
